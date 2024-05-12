@@ -165,10 +165,10 @@
                             <textarea id="nota" class="form-control border-success" placeholder="Leave a comment here" aria-label="With textarea"></textarea>
                             <label for="nota">Comunicazione *</label>
                         </div>
-                        <button type="submit" onclick="inviaComunicazione()" class="btn btn-outline-success mb-3">
+                        <button type="submit" onclick="inviaComunicazione(event)" class="btn btn-outline-success mb-3">
                             Invia Comunicazione
                         </button>
-                        <button type="submit" onclick="aggiungiEducatore()" class="btn btn-outline-success mb-3">
+                        <button type="button" onclick="aggiungiEducatore()" class="btn btn-outline-success mb-3">
                             Aggiungi Educatore
                         </button>
 
@@ -241,7 +241,8 @@
 
 
 
-        function inviaComunicazione() {
+        function inviaComunicazione(event) {
+            event.preventDefault();
 
             if ((cognomeBambino.value === '') || (nomeBambino.value === '') || (educatore.value === 'seleziona') || (nomeCognomeGenitore.value === '') || (numeroGenitore === '') || (data.value === '') || (nota.value === '')) {
                 alert("Verifica che i campi sono correttamente compilati.");
