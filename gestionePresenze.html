@@ -296,13 +296,7 @@
             var dataOdierna = new Date();
             var dataInserita = new Date(data.value);
 
-            // console.log("DataOdierna",dataOdierna.toLocaleDateString());
-            // console.log('DataInserita',dataInserita.toLocaleDateString());
-
-
-
-            if (new Date(dataInserita.toLocaleDateString()) < new Date(dataOdierna.toLocaleDateString())) {
-
+            if (dataInserita.getDate() < dataOdierna.getDate() || dataInserita.getMonth() < dataOdierna.getMonth() || dataInserita.getFullYear() < dataOdierna.getFullYear()) {
                 return true;
             }
             else {
