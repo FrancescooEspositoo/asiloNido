@@ -111,7 +111,7 @@
                         <a class="nav-link" href="contattiLogged.html">Developers</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">LOGOUT</a>
+                        <a class="nav-link" href="Index.html">LOGOUT</a>
                     </li>
                 </ul>
             </div>
@@ -192,8 +192,16 @@
     </footer>
     <!--Script da eliminare-->
     <script>
+        var inputEmail = document.getElementById("email-insert");
+
         function richiestaInfo() {
-            alert('Richiesta presa in carico! Risponderemo il prima possibile');
+            if (inputEmail.value === "") {
+                alert('Devi inserire una email valida!');
+                console.log(inputEmail.value);
+            } else {
+
+                alert('Richiesta presa in carico! Risponderemo il prima possibile');
+            }
         }
     </script>
 </body>

@@ -172,12 +172,12 @@
     </footer>
     <!--Script da eliminare-->
     <script>
-        var inputEmail = document.getElementById("email-insert").value;
+        var inputEmail = document.getElementById("email-insert");
 
         function richiestaInfo() {
-            if (!inputEmail) {
+            if (inputEmail.value === "") {
                 alert('Devi inserire una email valida!');
-
+                console.log(inputEmail.value);
                         } else {
 
                 alert('Richiesta presa in carico! Risponderemo il prima possibile');
